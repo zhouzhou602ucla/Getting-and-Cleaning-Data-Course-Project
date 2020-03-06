@@ -74,4 +74,7 @@ final_dt <- TidyData %>%
   group_by(subject_id,activity_label) %>%
   summarise_all(funs(mean))
 
+#Save the final dataset
+library(readr)
+write_excel_csv(final_dt,"finalData.csv")
 
